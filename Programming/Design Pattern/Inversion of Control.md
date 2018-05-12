@@ -71,7 +71,7 @@ class A
 
 ### DI (Dependency Injection)
 
-1. 생성자에 의한 주입
+1. 생성자
 
 <pre>
 <code>
@@ -94,7 +94,7 @@ class A
 </code>
 </pre>
 
-2. Setter에 의한 주입
+2. Setter
 
 <pre>
 <code>
@@ -116,42 +116,6 @@ class A
 
 </code>
 </pre>
-
-3. Singleton에 의한 주입
-: 생성자 내부 또는 함수 내부에서 초기화 할 수 있다.
-
-<pre>
-<code>
-
-class B
-{
-  public:
-    static B instance;    
-    ...
-}
-
-class A
-{
-  private:
-    B b;
-  
-  ...
-  
-  public:
-    void A()
-    {
-      this.b = B.instance;
-    }
-  
-    void Set(B b) // Set 함수에서 b를 초기화 한다.
-    {
-      this.b = B.instance;
-    }
-}
-
-</code>
-</pre>
-
 
 ### DL (Dependency Lookup)
 
